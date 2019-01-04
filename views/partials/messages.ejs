@@ -1,0 +1,55 @@
+<%# kono 1ta part ke jodi onno kono program e use kora hoy tokhn partials use hoy %>
+
+<% if (typeof errors != 'undefined') { %>
+    <%#users.js routes theke register er time e error thakle errors object ta send kortecilam.. ota diye check korteci error ache kina %>
+    <% errors.forEach(function (error) { %>
+
+        <div class="alert alert-dismissible alert-danger">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            <%= error.msg %>
+            <%#protita message ke loop chalaye print korteci.. ejs e print korar jonno = sign use hoy  %>
+
+        </div>
+
+
+
+    <% }); %>
+
+<% } %>
+
+
+<%#  flash message for registration success %>
+<% if (success_msg != '') { %>
+
+    <div class="alert alert-dismissible alert-success fade show" role="alert">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <%= success_msg %>
+        <%#protita message ke loop chalaye print korteci.. ejs e print korar jonno = sign use hoy  %>
+
+    </div>
+
+<% } %>
+
+<%#  flash message for registration failure %>
+<% if (error_msg != '') { %>
+
+    <div class="alert alert-dismissible alert-danger fade show" role="alert">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <%= error_msg %>
+        <%#protita message ke loop chalaye print korteci.. ejs e print korar jonno = sign use hoy  %>
+
+    </div>
+
+<% } %>
+
+<%#  flash message for login failure %>
+<% if (error != '') { %>
+
+    <div class="alert alert-dismissible alert-danger fade show" role="alert">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <%= error %>
+        <%#protita message ke loop chalaye print korteci.. ejs e print korar jonno = sign use hoy  %>
+
+    </div>
+
+<% } %>
